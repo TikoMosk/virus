@@ -22,15 +22,12 @@ public class Tube : MonoBehaviour
         gameSpeed = GameController.Instance.gameSpeed;
         SpawnTubes();
         InvokeRepeating("ChangeCurve", 0.5f /gameSpeed, 1 /gameSpeed);
-        InvokeRepeating("MoveCube", 0, 1f * gameSpeed);
+        InvokeRepeating("MoveCube", 0.5f, 0.9f / gameSpeed);
     }
 
-    private void Update() {
-       
-    }
     private void SpawnTubes() {
         tubes = new List<GameObject>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 20; i++) {
             Vector3 spawnPos = Vector3.forward *  (i * tubeSize);
             GameObject go = Instantiate(tube, spawnPos, Quaternion.identity);
             tubes.Add(go);
@@ -38,11 +35,11 @@ public class Tube : MonoBehaviour
         
     }
     private void MoveCube() {
-        Vector3 movePos = tubes[index].transform.position + Vector3.forward * (10 * tubeSize);
+        Vector3 movePos = tubes[index].transform.position + Vector3.forward * (20 * tubeSize);
         tubes[index].transform.position = movePos;
         GameObject temp = tubes[index];
         index++;
-        if(index >= 10) {
+        if(index >= 20) {
             index = 0;
         }
     }
@@ -58,11 +55,12 @@ public class Tube : MonoBehaviour
     private IEnumerator CurveCurve(float currentX,float currentY,float x, float y) {
         float t = 0;
         while (t < 10 / gameSpeed) {
-            Debug.Log("Lerp");
             t += Time.deltaTime * gameSpeed;
             curveX = Mathf.Lerp(currentX, x, t);
             curveY = Mathf.Lerp(currentY, y, t);
+
             for (int i = 0; i < curveMats.Count; i++) {
+
                 curveMats[i].SetFloat("_CurvatureX", curveX);
                 curveMats[i].SetFloat("_CurvatureY", curveY);
             }

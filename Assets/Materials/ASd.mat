@@ -57,8 +57,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
-    - _CurvatureX: -0.0013906506
-    - _CurvatureY: 0.0002946003
+    - _CurvatureX: -0.0012243525
+    - _CurvatureY: -0.004765985
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0

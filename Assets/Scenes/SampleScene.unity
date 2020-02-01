@@ -396,13 +396,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 721444123, guid: ba0c65e93c7c0844faeaaa4f56256333, type: 3}
-      propertyPath: spawnList.Array.data[0].prefab
+      propertyPath: spawnList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 721444123, guid: ba0c65e93c7c0844faeaaa4f56256333, type: 3}
+      propertyPath: spawnList.Array.data[0].percentToSpawn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 721444123, guid: ba0c65e93c7c0844faeaaa4f56256333, type: 3}
+      propertyPath: spawnList.Array.data[1].percentToSpawn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 721444123, guid: ba0c65e93c7c0844faeaaa4f56256333, type: 3}
+      propertyPath: spawnList.Array.data[2].name
+      value: Corona
+      objectReference: {fileID: 0}
+    - target: {fileID: 721444123, guid: ba0c65e93c7c0844faeaaa4f56256333, type: 3}
+      propertyPath: spawnList.Array.data[2].prefab
       value: 
-      objectReference: {fileID: 5676259119244284722, guid: 060bab37dfd3fa84f8814deef8ff6d38,
+      objectReference: {fileID: 6295214983708410568, guid: 18c3b3c97c981f6449ae37c6c6557275,
         type: 3}
+    - target: {fileID: 721444123, guid: ba0c65e93c7c0844faeaaa4f56256333, type: 3}
+      propertyPath: spawnList.Array.data[2].percentToSpawn
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 721444124, guid: ba0c65e93c7c0844faeaaa4f56256333, type: 3}
       propertyPath: gameSpeed
-      value: 1.2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5697102244045986065, guid: ba0c65e93c7c0844faeaaa4f56256333,
         type: 3}
@@ -464,25 +484,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
-    - target: {fileID: 5697102244045986071, guid: ba0c65e93c7c0844faeaaa4f56256333,
-        type: 3}
-      propertyPath: curveMats.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5697102244045986071, guid: ba0c65e93c7c0844faeaaa4f56256333,
-        type: 3}
-      propertyPath: tubeSize
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 5697102244045986071, guid: ba0c65e93c7c0844faeaaa4f56256333,
-        type: 3}
-      propertyPath: curveMats.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9aa5e20f12cc15f4ebf3beff0420163b, type: 2}
-    - target: {fileID: 5697102244045986071, guid: ba0c65e93c7c0844faeaaa4f56256333,
-        type: 3}
-      propertyPath: curveMats.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9cfb06fc615011d42bc5c6f8bc4f03dc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba0c65e93c7c0844faeaaa4f56256333, type: 3}

@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     private static GameController _instance;
     public float gameSpeed;
+    public Tube tube;
     public static GameController Instance {
         get {
             return _instance;

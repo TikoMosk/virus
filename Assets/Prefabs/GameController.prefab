@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe13fe2f35953604c97f7ed2dfbbb57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSpeed: 0
+  gameSpeed: 1
+  tube: {fileID: 0}
 --- !u!114 &5697102244045986071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,12 +61,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2.35
-  curveMat: {fileID: 2100000, guid: 9cfb06fc615011d42bc5c6f8bc4f03dc, type: 2}
+  curveMats:
+  - {fileID: 2100000, guid: 53dfdb465bea7814ab51a72ccf113ec6, type: 2}
+  - {fileID: 2100000, guid: cd4a01108c5716242873c6bbb0e75e89, type: 2}
+  - {fileID: 2100000, guid: 7872109be4046e046be9b2af2914a984, type: 2}
+  - {fileID: 2100000, guid: cd45988513a67494c9c99078bb2bfdc5, type: 2}
+  - {fileID: 2100000, guid: 3d74b635aa746be4d8222f41dfcebe6e, type: 2}
+  - {fileID: 2100000, guid: c2a8e5a0d1018a54691046697ea02571, type: 2}
+  - {fileID: 2100000, guid: b0612c54bfc2761468eb7164622da6f6, type: 2}
+  - {fileID: 2100000, guid: f40ca5af5383b7d48998da5da7d913f9, type: 2}
+  - {fileID: 2100000, guid: 883d83393474b244582853371cb4adf7, type: 2}
+  - {fileID: 2100000, guid: 219bcd33497f05848be03ba473caa592, type: 2}
+  - {fileID: 2100000, guid: 982c62608ba4ef842830fbdb8c04ea2d, type: 2}
+  - {fileID: 2100000, guid: 6622c61e920797e43b4e8e94bd315768, type: 2}
+  - {fileID: 2100000, guid: 4b76631dba4d640458d9a079bd50fc0e, type: 2}
+  - {fileID: 2100000, guid: 4b76631dba4d640458d9a079bd50fc0e, type: 2}
+  - {fileID: 2100000, guid: 1c8e8a8c29be12546b11ec5eb4fa3616, type: 2}
+  - {fileID: 2100000, guid: 3140816c2b0b26a49a97f5ffdcf472f2, type: 2}
+  - {fileID: 2100000, guid: 8648948278bf16041bc9de99f61a5ffa, type: 2}
+  - {fileID: 2100000, guid: a5f01713222ca2a4e9faebf321d701eb, type: 2}
+  - {fileID: 2100000, guid: 4f037b685e834064f9b59c78781ae333, type: 2}
+  - {fileID: 2100000, guid: fc9d63ae04fec224bbfea89a63e32523, type: 2}
+  - {fileID: 2100000, guid: a2e1ca7b966ed634a82ea39c4c21ac3f, type: 2}
+  - {fileID: 2100000, guid: 979fecb47412b7143b42797835141b96, type: 2}
+  - {fileID: 2100000, guid: 7fad594af98042f4bb2f8859a38e576e, type: 2}
+  - {fileID: 2100000, guid: 05fe24dc28fa2aa42a6cb1c5b091d930, type: 2}
+  - {fileID: 2100000, guid: 479fc50d1cbeada48a7ff2711bb8955f, type: 2}
+  - {fileID: 2100000, guid: 958185f626fbd194193a4663d9b0be79, type: 2}
+  - {fileID: 2100000, guid: 5424ae6dec3b46d42850752ff4d4404a, type: 2}
+  - {fileID: 2100000, guid: c2657125c1c0be64ebbb1e780554cee8, type: 2}
+  - {fileID: 2100000, guid: 1e533818780b83443b11a38273ec8706, type: 2}
+  - {fileID: 2100000, guid: 4201854f1559aef4298b442efdbee04a, type: 2}
+  - {fileID: 2100000, guid: 94e4284041d315644bb7967a95d29d08, type: 2}
+  - {fileID: 2100000, guid: 3af9f8100d872104984e463703c738d7, type: 2}
+  - {fileID: 2100000, guid: 85aaf2ab18d2fc64f8cf37d97877b0b8, type: 2}
+  - {fileID: 2100000, guid: 7b6b9d1be2c96ff4f97a39726cd56ecc, type: 2}
+  - {fileID: 2100000, guid: 7afa9922384d4404796f9d6fd8c0a4d6, type: 2}
+  - {fileID: 2100000, guid: 484162912a352ea499abbedd24011a1f, type: 2}
+  - {fileID: 2100000, guid: 9ce644411a748c94e9ce4cae41f9edc7, type: 2}
+  - {fileID: 2100000, guid: 84fd85ffc9f483348aa7bfe27f303d63, type: 2}
+  - {fileID: 2100000, guid: 0494300253d856b4eb6c8c6c829e5220, type: 2}
+  - {fileID: 2100000, guid: e0f4758822958f444880ee309ca0c6c1, type: 2}
+  - {fileID: 2100000, guid: 35443415a8d0ecd4c95b0824c1ec91f5, type: 2}
+  - {fileID: 2100000, guid: 9cef8938258215e44836281b7a8a8f1e, type: 2}
+  - {fileID: 2100000, guid: 0f240ca2836c0ad4da75d68433fd0caa, type: 2}
+  - {fileID: 2100000, guid: f959a4d273214c14b975cfbdd8a4be41, type: 2}
+  - {fileID: 2100000, guid: b4181e6b15b5df04e993e1b6cd7d2731, type: 2}
+  - {fileID: 2100000, guid: 61feeabc9f0b7f74db1f0b0f4bd065d9, type: 2}
+  - {fileID: 2100000, guid: 9c91d5d0e61fa8d48a50a92f20edd098, type: 2}
+  - {fileID: 2100000, guid: 62ffc20c3f781694687348ecfd3a8cc8, type: 2}
+  - {fileID: 2100000, guid: 99aed79f1a140a14e908152d82036a38, type: 2}
+  - {fileID: 2100000, guid: 466d79fd40afd704f953a3dcb2241228, type: 2}
+  - {fileID: 2100000, guid: 466d79fd40afd704f953a3dcb2241228, type: 2}
+  - {fileID: 2100000, guid: 466d79fd40afd704f953a3dcb2241228, type: 2}
+  - {fileID: 2100000, guid: 466d79fd40afd704f953a3dcb2241228, type: 2}
+  - {fileID: 2100000, guid: 466d79fd40afd704f953a3dcb2241228, type: 2}
+  - {fileID: 2100000, guid: 9aa5e20f12cc15f4ebf3beff0420163b, type: 2}
+  - {fileID: 2100000, guid: 9cfb06fc615011d42bc5c6f8bc4f03dc, type: 2}
+  - {fileID: 2100000, guid: 466d79fd40afd704f953a3dcb2241228, type: 2}
+  - {fileID: 2100000, guid: 466d79fd40afd704f953a3dcb2241228, type: 2}
+  - {fileID: 2100000, guid: 466d79fd40afd704f953a3dcb2241228, type: 2}
+  - {fileID: 2100000, guid: 466d79fd40afd704f953a3dcb2241228, type: 2}
   tube: {fileID: 514514150983975069, guid: b85ccecdede7e1149b7ad5720828f550, type: 3}
   minCurve: -0.01
   maxCurve: 0.01
   curveChangeTime: 0
-  tubeSize: 87.6
+  tubeSize: 45
 --- !u!114 &5697102244045986064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,7 +153,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnList:
-  - name: Test
-    prefab: {fileID: 8839302533301362262, guid: 1cddab748b763864a89779b2699044f8,
+  - name: BacteriaBasic
+    prefab: {fileID: 5676259119244284722, guid: 060bab37dfd3fa84f8814deef8ff6d38,
       type: 3}
     intensity: 10
+  - name: HeadBacteria
+    prefab: {fileID: 6729463321376963725, guid: eabc1dee66f315e49b11b93f06f2bc97,
+      type: 3}
+    intensity: 5
