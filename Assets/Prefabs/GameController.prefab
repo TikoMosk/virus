@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5697102244045986070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5697102244045986065}
+  - component: {fileID: 721444124}
+  - component: {fileID: 5697102244045986071}
+  - component: {fileID: 5697102244045986064}
+  - component: {fileID: 721444123}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5697102244045986065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697102244045986070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &721444124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697102244045986070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13fe2f35953604c97f7ed2dfbbb57d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSpeed: 0
+--- !u!114 &5697102244045986071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697102244045986070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da3ce609fdec8d4f9266e65b034df98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2.35
+  curveMat: {fileID: 2100000, guid: 9cfb06fc615011d42bc5c6f8bc4f03dc, type: 2}
+  tube: {fileID: 514514150983975069, guid: b85ccecdede7e1149b7ad5720828f550, type: 3}
+  minCurve: -0.01
+  maxCurve: 0.01
+  curveChangeTime: 0
+  tubeSize: 87.6
+--- !u!114 &5697102244045986064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697102244045986070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d579671a909baf429865a7b09242c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curveMat: {fileID: 2100000, guid: 9cfb06fc615011d42bc5c6f8bc4f03dc, type: 2}
+--- !u!114 &721444123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697102244045986070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8386e300f8562a548853ac87ed8f7924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList:
+  - name: Test
+    prefab: {fileID: 8839302533301362262, guid: 1cddab748b763864a89779b2699044f8,
+      type: 3}
+    intensity: 10
