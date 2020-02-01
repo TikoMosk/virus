@@ -3,11 +3,13 @@
 
 Shader "Custom/Miban" {
 	Properties{
+		_Color("Color",Color) = (1,1,1,1)
 		// Diffuse texture
 		_MainTex("Base (RGB)", 2D) = "white" {}
 	// Degree of curvature
 	_CurvatureX("Curvature X", Float) = 0.001
 	_CurvatureY("Curvature Y", Float) = 0.001
+	
 	}
 		SubShader{
 			Tags { "RenderType" = "Opaque" }
@@ -22,6 +24,8 @@ Shader "Custom/Miban" {
 		uniform sampler2D _MainTex;
 		uniform float _CurvatureX;
 		uniform float _CurvatureY;
+		fixed4 _Color;
+
 
 		// Basic input structure to the shader function
 		// requires only a single set of UV texture mapping coordinates
@@ -49,7 +53,7 @@ Shader "Custom/Miban" {
 
 		// This is just a default surface shader
 		void surf(Input IN, inout SurfaceOutput o) {
-			half4 c = tex2D(_MainTex, IN.uv_MainTex);
+			half4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
 			o.Albedo = c.rgb;
 			o.Alpha = c.a;
 		}

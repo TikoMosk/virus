@@ -38,6 +38,8 @@ public class Spawner : MonoBehaviour
     }
     private Vector3 GetRandomPosition() {
         Vector3 pos = Random.insideUnitCircle.normalized * tube.radius;
+        Vector3 normal = (pos - new Vector3(0, 0, pos.z)).normalized;
+        pos -= normal * 0.5f;
         return new Vector3(pos.x,pos.y,50);
     }
     private Quaternion GetRotation(Vector3 position) {
