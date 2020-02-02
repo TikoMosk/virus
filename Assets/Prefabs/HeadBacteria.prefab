@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1685149096646489070}
   - component: {fileID: 1213342471329758159}
   - component: {fileID: 1419513533693546962}
+  - component: {fileID: -7549848060221726504}
   m_Layer: 0
   m_Name: HeadBacteria
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6729463321376963725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 3, z: 1}
   m_Children:
   - {fileID: 4221649821574281670}
   m_Father: {fileID: 0}
@@ -58,6 +59,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToSelfDestruct: 10
+--- !u!114 &-7549848060221726504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6729463321376963725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f930c0d42ecca408ebe50c5867c8b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 1
 --- !u!1001 &9217994238453551836
 PrefabInstance:
   m_ObjectHideFlags: 0

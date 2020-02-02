@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5676259119244284723}
   - component: {fileID: 2773012119860022207}
   - component: {fileID: 6540702448409117461}
+  - component: {fileID: -3648244442919998441}
+  - component: {fileID: 3403480939488381929}
   m_Layer: 0
   m_Name: Bacteria
   m_TagString: Untagged
@@ -58,6 +60,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToSelfDestruct: 10
+--- !u!114 &-3648244442919998441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676259119244284722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f930c0d42ecca408ebe50c5867c8b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 1
+--- !u!136 &3403480939488381929
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676259119244284722}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.02
+  m_Height: 0.024274737
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.48, z: 0}
 --- !u!1001 &373448504551781864
 PrefabInstance:
   m_ObjectHideFlags: 0

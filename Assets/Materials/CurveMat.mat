@@ -58,8 +58,8 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Curvature: -0.01
-    - _CurvatureX: 0
-    - _CurvatureY: 0
+    - _CurvatureX: 0.007873261
+    - _CurvatureY: 0.0021199554
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
