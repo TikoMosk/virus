@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class RaycastShoot : MonoBehaviour
 {
@@ -13,14 +14,18 @@ public class RaycastShoot : MonoBehaviour
     private Camera fpsCam;                                               
     private WaitForSeconds shotDuration = new WaitForSeconds(0.07f);
     private WaitForSeconds destroyBullet = new WaitForSeconds(1);
-    private LineRenderer laserLine;                                        
+    //private LineRenderer laserLine;                                        
     private float nextFire;
     private GameObject bullet;
     private ParticleSystem muzzleFlashParticle;
+    PlayerMovementScript player;
+
+    int score = 0;
+    public Text text;
 
     void Start()
     {
-        laserLine = GetComponent<LineRenderer>();
+        //laserLine = GetComponent<LineRenderer>();
         fpsCam = GetComponentInParent<Camera>();
     }
 
@@ -37,7 +42,7 @@ public class RaycastShoot : MonoBehaviour
 
             RaycastHit hit;
 
-            laserLine.SetPosition(0, gunEnd.position);
+            //laserLine.SetPosition(0, gunEnd.position);
 
             bullet = Instantiate(projectile, gunEnd.position, Quaternion.identity) as GameObject;
             bullet.transform.localRotation = Quaternion.Euler(0, 90, 180);
@@ -46,15 +51,20 @@ public class RaycastShoot : MonoBehaviour
 
             if (Physics.Raycast(rayOrigin, gunEnd.transform.forward, out hit, weaponRange))
             {
-                laserLine.SetPosition(1, hit.point);
-
+                if(Physics.Raycast(rayOrigin, gunEnd.transform.forward, out hit, weaponRange) && hit.transform.tag == "Friendly")
+                {
+                    player.health -= 1;
+                    Debug.LogError("CYKA");
+                }
                 ShootableVirus health = hit.collider.GetComponent<ShootableVirus>();
 
                 if (health != null)
                 {
                     health.Damage(gunDamage);
-                    Debug.LogError("Health = " + health);
+                    score++;
+                    text.text = score.ToString();
                 }
+                
 
                 if (hit.rigidbody != null)
                 {
@@ -63,7 +73,7 @@ public class RaycastShoot : MonoBehaviour
             }
             else
             {
-                laserLine.SetPosition(1, rayOrigin + (gunEnd.transform.forward * weaponRange));
+                //laserLine.SetPosition(1, rayOrigin + (gunEnd.transform.forward * weaponRange));
             }
         }
 
@@ -85,10 +95,10 @@ public class RaycastShoot : MonoBehaviour
 
     private IEnumerator ShotEffect()
     {
-        laserLine.enabled = true;
+        //laserLine.enabled = true;
         yield return shotDuration;
         muzzleFlashParticle.Play();
-        laserLine.enabled = false;
+        //laserLine.enabled = false;
 
     }
 

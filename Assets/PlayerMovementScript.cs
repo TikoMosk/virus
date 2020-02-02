@@ -1,29 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovementScript : MonoBehaviour {
 
-    public float moveSpeed;
+    public Slider slider;
+    public int health = 5;
+    public GameObject gameOver;
 
-    private Vector3 moveDirection;
-
+    private void Start()
+    {
+        
+    }
     void Update()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            //transform.localRotation = Quaternion.Euler(0, 0 ,1);
-            moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
+            transform.Rotate(0, 0, 50 * Time.deltaTime * 5); 
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            //transform.localRotation = Quaternion.Euler(0, 0,1);
-            moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
+            transform.Rotate(0, 0, -50 * Time.deltaTime * 5); 
         }
+        slider.value = health;
+        if(health <= 0)
+        {
+            slider.gameObject.SetActive(false);
+            gameOver.SetActive(true);
+            Time.timeScale = 0;
+        }
+        
     }
 
-    void FixedUpdate()
+    private void OnCollisionEnter(Collision col)
     {
-        GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + transform.TransformDirection(moveDirection) * moveSpeed * Time.deltaTime);
+        if (col.gameObject.tag == "Shootable" || col.gameObject.tag == "Friendly")
+        {
+            health -= 1;
+            Destroy(col.collider.gameObject);
+        }
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7549848060221726504}
   m_Layer: 0
   m_Name: HeadBacteria
-  m_TagString: Untagged
+  m_TagString: Shootable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
